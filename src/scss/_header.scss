@@ -1,0 +1,102 @@
+.header {
+    display: block;
+    width: 100%;
+    margin-top: 5.5rem;
+    margin-bottom: 3rem;
+
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.header__title {
+    float: left;
+    padding-left: .5rem;
+    font-family: $Segoe;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-size: 4.429rem;
+    line-height: 1.07;
+    color: $textBlack;
+    margin: .7rem 0 .7rem -.95rem;
+    letter-spacing: -.025rem;
+}
+
+.header__descr {
+    font-size: 2rem;
+    color: $textBlack;
+    margin-left:  -.8rem;
+}
+
+.nav {
+    float: right;
+    font-family: $Segoe;
+    align-self: center;
+    padding-top: 1.8rem;
+}
+
+.nav__list {
+    
+    list-style: none;
+}
+
+.nav__item {
+    display: inline-block;
+    position: relative;
+    
+    
+
+    a {
+        text-decoration: none;
+        color: $blue;
+        font-size: 2.4rem;
+    }
+}
+
+.nav__item--about {
+    margin-right: 3.3rem;
+    line-height: 2;
+    top:-.5rem;
+}
+
+.nav__item--news {
+    margin-right: 5rem;
+    line-height: 2;
+    top:-.5rem;
+}
+
+
+.nav__item--f, .nav__item--twitt, .nav__item--vk {
+        height: 34px;
+        width: 34px;
+        background-image: url('../img/png-sprite.png');
+        background-repeat: no-repeat;
+        background-position-y: 0;
+                
+    a {
+        height: 100%;
+        display: block;
+    }
+}
+
+.nav__item--f {    background-position-x: -134px;
+    
+    margin-right: 2.1rem;
+    
+}
+
+.nav__item--twitt {
+    background-position-x: -170px;
+    margin-right: 2.3rem;
+}
+
+.nav__item--vk {
+    width: 38px;
+    background-position-x: -207px;
+    margin-right: 0;
+}
