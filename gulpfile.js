@@ -64,7 +64,7 @@ gulp.task('getJs', function(){
     .pipe(plumber({
         errorHandler: notify.onError()
     }))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });

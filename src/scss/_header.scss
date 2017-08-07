@@ -47,9 +47,7 @@ h1 {
 
 .nav__item {
     display: inline-block;
-    position: relative;
-    
-    
+    position: relative;    
 
     a {
         text-decoration: none;
@@ -84,10 +82,9 @@ h1 {
     }
 }
 
-.nav__item--f {    background-position-x: -134px;
-    
-    margin-right: 2.1rem;
-    
+.nav__item--f {    
+    background-position-x: -134px;    
+    margin-right: 2.1rem;    
 }
 
 .nav__item--twitt {
@@ -99,4 +96,59 @@ h1 {
     width: 38px;
     background-position-x: -207px;
     margin-right: 0;
+}
+
+
+@media only screen and (max-width : $screen-xl) {
+
+}
+
+@media only screen and (max-width : $screen-lg) {
+
+    .nav {
+    float: left;
+    }
+
+    .nav__item {
+        a {
+            font-size: 2rem;
+        }
+    }
+
+    .nav__item--f, .nav__item--twitt, .nav__item--vk {
+        transform: scale(.85);
+    }
+}
+
+@media only screen and (max-width : $screen-md) {
+    
+
+}
+
+@media only screen and (max-width : $screen-sm) {
+    .header {
+        margin: 4rem 1rem 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .nav {
+        width: 35rem;
+        margin-left: calc(50% - 15rem);
+    }
+
+    .nav__item--f {
+        margin-top: 1rem;
+        margin-right: 5rem;    
+    }
+
+    .nav__item--twitt {
+        margin-right: 5rem; 
+    }
+}
+
+@media only screen and (max-width : $screen-xs) {
+
 }

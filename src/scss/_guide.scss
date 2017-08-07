@@ -11,6 +11,16 @@
     letter-spacing: .1rem;
     color: $textBlack;
     margin: 0 0 6rem -1rem;
+
+    @media only screen and (max-width : $screen-md) {
+        font-size: 9rem;
+        margin: 6rem 0 3rem -1rem;
+    }
+
+    @media only screen and (max-width : $screen-sm) {
+        font-size: 6rem;
+        margin: 6rem 0 3rem 1.5rem;
+    }
 }
 
 .guide__menu {
@@ -20,6 +30,11 @@
     color: $textBlack;
     font-weight: 400;
     margin: 0 0 5.375rem -.8rem;
+
+    @media only screen and (max-width : $screen-sm) {
+        font-size: 3rem;
+        margin: 0 0 5.375rem 1.5rem;
+    }
 }
 
 .menu__target {
@@ -47,7 +62,6 @@
     max-width: $screen-xxl;
     width: $screen-xxl;
     height: 300px;
-    outline: 2px solid blue;
     flex-grow: 1;
     list-style: none;
     padding: 1rem 2rem;
@@ -57,7 +71,6 @@
 .menu__item {
     flex-basis: 40px;
     padding-left: 1rem;
-    outline: 1px solid red;
 
     a {
         font-size: 2rem;
@@ -67,27 +80,68 @@
 }
 
 .guide__alarm {
-    display: none;
+    display: block;
+    color: $red;
     font-family: $Segoe;
     font-size: 4rem;
-    color: tomato;
     margin-bottom: 5rem;
 }
 
 .guide__mainBlock {
     display: block;
     width: 100%;
-
-    &::after {
+     &::after {
         display: block;
         content: "";
         clear: both;
-    }
+    }    
 }
 
 .guide__list {
     width: 100%;
     list-style: none;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: -948px;
+        top: 0;
+        display: block;
+        content: '';
+        width: 948px;
+        height: 590px;
+        background: url(../img/bg_image_left_side.png) no-repeat;
+    }
+
+    &::after {
+        position: absolute;
+        right: -1031px;
+        top: 0;
+        display: block;
+        content: '';
+        width: 1031px;
+        height: 519px;
+        background: url(../img/bg_image_right_side.png) no-repeat;
+        clear: both;
+    } 
+
+    @media only screen and (max-width : $screen-xxl) {
+        &::before, &::after {
+            background: none;
+        }
+    }
+}
+
+.guide__colWrapper {
+
+    float: left;
+
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    } 
+
 }
 
 .guide__item {
@@ -97,9 +151,39 @@
     margin-bottom: 2.4rem;
     position: relative;    
     overflow: hidden;
-    border-radius: 2px;    
+    border-radius: .2rem;    
     font-size: 0;
     line-height: 1;
+ 
+
+    @media only screen and (max-width : $screen-xxl) {
+        width: 275px;
+        height: 275px;
+    }
+
+    @media only screen and (max-width : $screen-xl) {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 3rem;
+    }
+
+    @media only screen and (max-width : $screen-lg) {
+        width: 328px;
+        height: 328px;
+    }
+
+    @media only screen and (max-width : $screen-md) {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media only screen and (max-width : $screen-sm) {
+
+    }
+
+    @media only screen and (max-width : $screen-xs) {
+
+    }
 }
 
 .guide__item--disp {
@@ -161,6 +245,10 @@
     margin: 12rem 3rem 0;
     font-size: 3.6rem;
     line-height: 1.11;
+
+    @media only screen and (max-width : $screen-xxl) {
+        margin: 14rem 3rem 0;
+    }
 }
 
 .guide__wrapper {
@@ -201,18 +289,4 @@
     color: $bgColor;
     font-size: 1.8rem;
     margin-bottom: 2.1rem;
-}
-
-
-    .big-li {
-            width: 100%;
-            background-color: darkcyan;
-        }
-
-.guide__add-elem {
-    float: right;
-    width: 328px;
-    height: 328px;
-    outline: 1px solid blue;
-    background-color: darkcyan;
 }
