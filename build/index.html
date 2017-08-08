@@ -32,10 +32,17 @@
     <!-- ==== Guide BEGIN ==== -->
     <section class = "guide">
         <h2 class="guide__title">Путеводитель</h2>
-        <!-- ==== guide__menu BEGIN ==== -->
-        <section class = "guide__menu">    
-            Выберите <span class="menu__target">город</span>
-            <menu class="menu">
+
+        <div class = "guide__menu">    
+            Выберите <span class="menu__target">город</span>           
+        </div>
+
+        <section class = "guide__mainBlock">
+             <div class="guide__alarm">
+                ОЙ! Кажется, у вас выключен JavaScript, боюсь, без него все работает совсем не так как должно!
+            </div> 
+
+             <menu class="menu">
                 <ul class="menu__list">
                     <li class="menu__item"><a href="#">Минск</a></li>
                     <li class="menu__item"><a href="#">Нижний Новгород</a></li>
@@ -62,14 +69,6 @@
                     <li class="menu__item"><a href="#">Ростов-на-Дону</a></li>
                 </ul>
             </menu>
-        </section>
-        <!-- ==== guide__menu END ==== -->
-
-        <!-- ==== guide__items BEGIN ==== -->
-        <section class = "guide__mainBlock">
-            <div class="guide__alarm">
-                ОЙ! Кажется, у вас выключен JavaScript, боюсь, без него все работает совсем не так как должно!
-            </div>
 
             <ul class="guide__list">  
                 <li class="guide__item guide__item--disp">
@@ -101,7 +100,7 @@
                     <div class="btn">Добавить место</div>                    
                 </li>
 
-                <li class="guide__item guide__item--disp">
+                 <li class="guide__item guide__item--disp">
                     <img class="guide__img" src="img/thumb_id_4.jpg" alt="Mr.Cat">
                     <div class="guide__wrapper">
                         <div class="guide__name">Freelance Cafe</div>
@@ -123,17 +122,29 @@
                         <div class="guide__name">IT-office</div>
                         <div class="guide__city">Кемерово</div>
                     </div>
-                </li>  
-            </ul>       
+                </li>   
+            </ul>
+            
+            <form id="callbackForm" class="contact__form">						
+                <h3 class="contact__title">Добавьте свое место!</h3>					
+                <input type="text" name="name" placeholder="Название события *" required>
+                <input type="text" name="city" placeholder="Город *" required>
+                <input type="text" name="img" placeholder="Загрузить изображение *" required>
+                <input type="text" name="link" placeholder="Ссылка">
+                <input type="text" name="adress" placeholder="Адрес">
+                <input type="text" name="person" placeholder="Ваше имя">
+                <textarea name="descr" placeholder="Описание события"></textarea>	
+                <div class="btn btn--form">Добавить место</div>
+                <div class="full__btn full__btn--form"></div>
+            </form>
         </section>
-        <!-- ==== guide__items END ==== -->
     
     </section>
     <!-- ==== Guide END ==== -->
 
 
 </div>
-
+<div class="shadowGround"></div>
     <script src="js/custom.js"></script>
 </body>
 </html>

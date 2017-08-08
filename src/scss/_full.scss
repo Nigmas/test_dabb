@@ -1,0 +1,188 @@
+
+.full {
+    position: absolute;
+    top: 39.3rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.full__imgBlock {
+    display: inline-block;
+    width: 68.4rem;
+    overflow: hidden;
+}
+
+.full__img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.full__textBlock {
+    width: calc(100% - 68.4rem);
+    float: right;
+    padding: 12rem 10rem 0 8.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.full__name {
+    font-family: $SegoeLight;
+    font-size: 5.4rem;
+    line-height: 1.04;
+    color: $textBlack;
+}
+
+.full__descr {
+    font-family: $Segoe;
+    font-size: 2.4rem;
+    line-height: 1.33;
+    color: $textBlack;
+    margin-top: 3.4rem;
+}
+
+.full__link {
+    font-family: $Segoe;
+    font-size: 2.4rem;
+    color: $blue;
+    margin: 3.3rem 0 0 4rem;
+    position: relative;
+}
+
+.full__adress {
+    font-family: $Segoe;
+    font-size: 2.4rem;
+    line-height: 1.33;
+    color: $blue;
+    margin: 1.7rem 0 0 4rem;
+    position: relative;
+}
+
+.full__person {
+    font-family: $Segoe;
+    font-size: 2.4rem;
+    color: $textBlack;
+    margin: 1.8rem 0 0 4rem;
+    position: relative;
+}
+
+.full__link, .full__adress, .full__person {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -4.5rem;
+        height: 36px;
+        width: 34px;
+        background-image: url('../img/png-sprite.png');
+        background-repeat: no-repeat;
+        background-position-y: 2px;
+        background-position-X: 0;
+    }
+}
+
+.full__adress, .full__person {
+
+    &::before {
+        top: 0;
+        left: -4.5rem;
+        background-position-X: -34px;
+    }
+}
+
+.full__person {
+
+    &::before {
+        height: 44px;
+        top: 0;
+        left: -4.5rem;
+        background-position-X: -68px;
+        background-position-y: -3px;
+    }
+}
+
+.full__btn {
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    height: 34px;
+    width: 34px;
+    background-image: url('../img/png-sprite.png');
+    background-repeat: no-repeat;
+    background-position-y: -10px;
+    background-position-X: -100px;
+    cursor: pointer;
+}
+
+.full__btn--form {
+    top: 2rem;
+    right: 1.5rem;
+}
+
+
+
+@media only screen and (max-width : $screen-xxl) {
+
+    .full__imgBlock {
+        width: 71.5rem;
+    }
+
+    .full__textBlock {
+        width: calc(100% - 71.5rem);
+    }
+}
+
+@media only screen and (max-width : $screen-xl) {
+
+    .full__imgBlock {
+        width: 60rem;
+    }
+
+    .full__textBlock {
+        width: calc(100% - 60rem);
+        padding: 6rem 4rem 0 8rem;
+    }
+
+}
+
+@media only screen and (max-width : $screen-lg) {
+    .full__imgBlock {
+        display: none;
+    }
+
+    .full__textBlock {
+        width: 100%;
+        padding: 8rem 6rem 0 8rem;
+    }
+}
+
+@media only screen and (max-width : $screen-md) {
+
+    .full__textBlock {
+        width: 100%;
+        padding: 3rem 3rem;
+    }
+
+    .full__name {
+        font-size: 4.4rem;
+    }
+
+    .full__descr {
+        font-size: 2.2rem;
+    }
+
+
+    .full__link, .full__adress, .full__person {
+        margin-left: 0;
+        font-size: 1.9rem;
+
+    &::before {
+        display: none;
+    }
+    }
+
+}
