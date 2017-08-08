@@ -119,6 +119,3 @@ gulp.task('watcher', function(){
 });
 
 gulp.task('getWatch', ['webserver', 'watcher']);
-
-
-//Настроить браузерСинк!  настроить стаиллинт
