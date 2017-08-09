@@ -107,7 +107,7 @@ function getComputedValue () {
         return resalt;
 };
 
-var values = getComputedValue();
+var valuesData = getComputedValue();
 
 function createItem (obj) {
 
@@ -213,6 +213,7 @@ rebuildDOM();
 
 window.onresize = function(event) {
    rebuildDOM();
+   valuesData = getComputedValue();
 };
 
 
@@ -360,10 +361,10 @@ document.querySelector(".guide__mainBlock").addEventListener("click", function (
 
 
 function renderFullBlock (elem, data) {
-        var fullSize = createVirtFullSizeItem( elem, data, countMargin(elem, values) );
+        var fullSize = createVirtFullSizeItem( elem, data, countMargin(elem, valuesData) );
         
         hideAll();
-        cleanSpaceFromBlock(elem, countMargin(elem, values) );        
+        cleanSpaceFromBlock(elem, countMargin(elem, valuesData) );        
         document.querySelector(".guide__list").appendChild(fullSize);
     }
 
